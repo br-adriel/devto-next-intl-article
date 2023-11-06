@@ -1,13 +1,18 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import styles from '../page.module.css';
 
 export default function Home() {
+  const t = useTranslations('home.page');
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          {t('get-started')}&nbsp;
+          <code className={styles.code}>src/app/[locale]/page.tsx</code>
         </p>
         <div>
           <a
@@ -15,7 +20,7 @@ export default function Home() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            By{' '}
+            {t('by') + ' '}
             <Image
               src='/vercel.svg'
               alt='Vercel Logo'
@@ -47,9 +52,9 @@ export default function Home() {
           rel='noopener noreferrer'
         >
           <h2>
-            Docs <span>-&gt;</span>
+            {t('docs.title')} <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
+          <p>{t('docs.content')}</p>
         </a>
 
         <a
@@ -59,9 +64,10 @@ export default function Home() {
           rel='noopener noreferrer'
         >
           <h2>
-            Learn <span>-&gt;</span>
+            {t('learn.title')}
+            <span>-&gt;</span>
           </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+          <p>{t('learn.content')}</p>
         </a>
 
         <a
@@ -71,9 +77,9 @@ export default function Home() {
           rel='noopener noreferrer'
         >
           <h2>
-            Templates <span>-&gt;</span>
+            {t('templates.title')} <span>-&gt;</span>
           </h2>
-          <p>Explore the Next.js 13 playground.</p>
+          <p>{t('templates.content')}</p>
         </a>
 
         <a
@@ -83,11 +89,9 @@ export default function Home() {
           rel='noopener noreferrer'
         >
           <h2>
-            Deploy <span>-&gt;</span>
+            {t('deploy.title')} <span>-&gt;</span>
           </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+          <p>{t('deploy.content')}</p>
         </a>
       </div>
     </main>
