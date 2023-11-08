@@ -1,3 +1,8 @@
+# Article abot next-intl
+
+This repository has the code developed by me when I wrote an [article on dev.to
+about how to use next-intl](https://dev.to/adrielfsantos/criando-um-site-com-multiplos-idiomas-usando-nextjs-e-next-intl-dm).
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
