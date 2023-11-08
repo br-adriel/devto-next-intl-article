@@ -5,6 +5,19 @@ import LearnCard from '@/components/LearnCard';
 import TemplatesCard from '@/components/TemplatesCard';
 import Image from 'next/image';
 import styles from '../page.module.css';
+import { Metadata } from 'next';
+
+interface MetadataProps {
+  params: { locale: string };
+  searchParams: {};
+}
+
+export async function generateMetadata({
+  params,
+}: MetadataProps): Promise<Metadata> {
+  const messages = (await import(`@/messages/${params.locale}.json`)).default;
+  return messages.home.meta;
+}
 
 export default function Home() {
   return (
