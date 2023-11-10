@@ -1,4 +1,4 @@
-# Article abot next-intl
+# Article about next-intl
 
 This repository has the code developed by me when I wrote an [article on dev.to
 about how to use next-intl](https://dev.to/adrielfsantos/criando-um-site-com-multiplos-idiomas-usando-nextjs-e-next-intl-dm).
